@@ -1,0 +1,11 @@
+# Here is the configuration for "asset" twig helper
+# It targets asset folders by ressource type
+# For example to load an img which is in assets/img/
+# Use : {{ asset('path-to-my.jpg', 'img') }}
+
+# On all environments
+default :
+  css   : "{{server.base}}assets/css/"
+  js    : "{{server.base}}assets/js/"
+  img   : "{{server.base}}assets/img/"
+  fonts : "{{server.base}}assets/fonts/"

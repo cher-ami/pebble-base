@@ -1,0 +1,13 @@
+{
+	"require": {
+		"cher-ami/pebble-lib": ">=0.1.0"
+	},
+	"minimum-stability": "dev",
+	"autoload": {
+		"psr-4": {
+			"controllers\\": "controllers/",
+			"models\\": "models/",
+			"views\\": "views/"
+		}
+	}
+}

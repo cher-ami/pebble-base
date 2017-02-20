@@ -1,0 +1,27 @@
+
+# ------------------------------------------------------------------------------ COMPOSER
+
+# Ignore loaded composer modules
+app/vendor/*
+
+# Ignore composer lock installation
+app/composer.lock
+
+
+# ------------------------------------------------------------------------------ DEPLOYED
+
+# Ignore deployed files (see comments inside this file before removing comment)
+#app/configs/app.yml
+
+
+# ------------------------------------------------------------------------------ POOPS
+
+# Mac poops
+.DS_Store
+
+# Ignore ide files
+.idea
+
+# Logs
+logs
+*.log

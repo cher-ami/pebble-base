@@ -1,0 +1,30 @@
+
+# On all environments
+default :
+
+  # ---------------------------------------------------------------------------- STATUS
+
+  # 404 not found
+  notFound :
+    view    : errors/notFound
+
+  # Fatal error. Only with debug mode disabled.
+  fatal :
+    view    : errors/fatal
+
+
+  # ---------------------------------------------------------------------------- PAGES
+
+  # Home page route
+  index :
+    url     : /
+    action  : PagesController.index
+
+
+  # ---------------------------------------------------------------------------- API
+
+  # Service demo ...
+  demoService :
+    method  : post
+    url     : /api/1.0/demo.json
+    action  : DemoServiceController.demoAction

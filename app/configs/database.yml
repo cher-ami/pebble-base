@@ -1,0 +1,14 @@
+# Configuration for PDO database connection
+# You can override specific properties depending on the environment declared in app.yml
+
+# On all environments
+default:
+  host      : ""
+  user      : ""
+  password  : ""
+  dbname    : ""
+
+# On prod env only
+production:
+  host      : "my-specific-host-for-production-env"
+  password  : "my-specific-password-for-production-env"

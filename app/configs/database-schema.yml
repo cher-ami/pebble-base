@@ -1,0 +1,14 @@
+# Here is the configuration to auto create database schema
+
+default :
+
+  # Database is selected following database.yml config file.
+  # Tables to create on this database if its doesn't exists at all.
+  # Tables will not be created if database already exists.
+  tables :
+    tableName : |
+      CREATE TABLE IF NOT EXISTS `tableName` (
+        `id` int(11) NOT NULL AUTO_INCREMENT,
+        -- ...
+        PRIMARY KEY (`id`)
+      ) ENGINE=InnoDB DEFAULT CHARSET=latin1;

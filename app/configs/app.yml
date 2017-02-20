@@ -1,0 +1,16 @@
+# App configuration.
+
+# Usage :
+# Available in templating with {{ config.app }}
+# Available in PHP with PebbleApp->getIntance()->getConfig('app')
+
+# Important :
+# We advice to use configurable automated task to manage this file
+# This file has to be "make" and added into .gitignore file.
+# For example see :
+# - https://www.npmjs.com/package/grunt-deployer
+# - https://github.com/solid-js/web-base
+
+version   : "0.1.0"
+env       : "name-of-running-environment"
+debug     : true

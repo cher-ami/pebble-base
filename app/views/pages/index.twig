@@ -1,0 +1,26 @@
+
+{% extends "layouts/mainLayout.twig" %}
+
+{% block content %}
+
+	<!-- APP DOM -->
+	<div class="AppView">
+
+	</div>
+
+	<!-- APP SCRIPTS -->
+	<script>
+
+		// TODO : Dico
+		var __dictionary = "";//{# dictionnary | json_encode() | raw #}
+
+		requirejs(['src/moduleName/Main'], function (MainModule)
+		{
+			var app = new MainModule.Main({
+				root		: $('.AppView'),
+				host		: "{{ config.server.host }}",
+				base		: "{{ config.server.base }}"
+			});
+		});
+	</script>
+{% endblock %}

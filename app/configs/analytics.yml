@@ -1,0 +1,4 @@
+# Analytics configuration
+
+default :
+  trackingCode: "UA-.....-1"
