@@ -2,16 +2,16 @@
 # ------------------------------------------------------------------------------ COMPOSER
 
 # Ignore loaded composer modules
-app/vendor/*
+www/app/vendor/*
 
 # Ignore composer lock installation
-app/composer.lock
+www/app/composer.lock
 
 
 # ------------------------------------------------------------------------------ DEPLOYED
 
 # Ignore deployed files (see comments inside this file before removing comment)
-#app/configs/app.yml
+#www/app/configs/app.yml
 
 
 # ------------------------------------------------------------------------------ POOPS
