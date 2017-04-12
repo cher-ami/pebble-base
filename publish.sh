@@ -11,7 +11,7 @@ fi
 message="$1"
 
 # Reading version from bower.json with node
-version=$(node --eval "console.log(require('./app/composer.json').version)")
+version=$(node --eval "console.log(require('./www/app/composer.json').version)")
 
 echo "> Version: $version";
 echo "> Message: $message";
