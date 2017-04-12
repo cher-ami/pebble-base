@@ -5,15 +5,13 @@
 
 	<!-- APP DOM -->
 	<div class="AppView">
-
+		<h1>{{ config.dictionary.currentPage.title }}</h1>
+		<p>{{ config.dictionary.currentPage.content }}</p>
 	</div>
 
 	<!-- APP SCRIPTS -->
 	<script>
-
-		// TODO : Dico
-		var __dictionary = "";//{# dictionnary | json_encode() | raw #}
-
+		/*
 		requirejs(['src/moduleName/Main'], function (MainModule)
 		{
 			var app = new MainModule.Main({
@@ -22,5 +20,6 @@
 				base		: "{{ config.server.base }}"
 			});
 		});
+		*/
 	</script>
 {% endblock %}

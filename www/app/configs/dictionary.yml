@@ -1,0 +1,72 @@
+
+### Dictionary :
+# Here goes all text of your application.
+# Do not insert any word directly inside your template or your javascript code.
+# So your app will be more portable and translatable easily.
+
+### Current page :
+# Pebble will add a node "currentPage" inside "config.dictionary" depending
+# on which page you are. If you have "config.dictionary.pages.indexPage" node
+# defined, config.dictionary.currentPage will be set if you are on "indexPage"
+# route.yml keys are used to target currentPage.
+
+### Inside templates :
+# You can use {{ config.dictionary }} inside templates to access this config.
+
+### From javascript :
+# Your dictionary needs to be available to javascript
+# window.__dictionary is injected with "public" and "currentPage"
+
+
+# On all environments
+default :
+
+  # ---------------------------------------------------------------------------- PUBLIC
+
+  # Available from all pages
+  # Warning, this can be injected as clear JSON for javascript
+  public :
+
+    # Data for layout
+    layout :
+      header :
+      footer :
+
+    # Common words or sentences used across the app
+    generic :
+      share : 'Share'
+
+
+  # ---------------------------------------------------------------------------- PRIVATE
+
+  # Available from all pages
+  # This will not be injected as clear JSON for javascript
+  private :
+
+
+  # ---------------------------------------------------------------------------- PAGES
+
+  # Available for current page only
+  # Warning, this can be injected as clear JSON for javascript
+  # Page data are be injected into "config.dictionary.currentPage" dynamically.
+  pages :
+    # Not found page
+    notFound :
+      text : 404
+
+    # Fatal error page
+    fatal :
+      text : "A fatal error occurred"
+
+    # Injected for index page
+    index :
+      title : "Title for homePage"
+      content : |
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        Integer maximus, erat a ornare dapibus, ex dolor tempor dui, nec fringilla ante leo sed sapien.
+        Curabitur pretium accumsan dui, id hendrerit sapien dapibus ut. Etiam risus quam, blandit laoreet justo ac, congue hendrerit mauris.
+        Integer ac dignissim odio, ut congue turpis.
+        Praesent justo dui, venenatis eget turpis nec, facilisis commodo turpis. Suspendisse at gravida risus.
+        Nullam quis scelerisque lacus. Suspendisse quam odio, vehicula ut convallis id, luctus scelerisque risus. Maecenas eget egestas quam.
+        Pellentesque euismod magna a nulla lobortis, et molestie velit venenatis.
+

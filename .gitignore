@@ -7,6 +7,9 @@ www/app/vendor/*
 # Ignore composer lock installation
 www/app/composer.lock
 
+# Ignore temp files
+www/app/temp/*
+
 
 # ------------------------------------------------------------------------------ DEPLOYED
 
