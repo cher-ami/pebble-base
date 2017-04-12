@@ -1,4 +1,36 @@
 
+### Routes
+# Here are configured all end-points of our application.
+
+
+### Special cases
+# "notFound" route is triggered on 404 status
+# "fatal" route is triggered for any other server error
+
+### Route config
+# Available config parameters :
+# - "url" (mandatory)
+#     The URL triggering your route. With leading slash.
+#     Parameters are used that way : "/folder/{param1}/{slug}.html"
+#     Please use camelCase to name your parameters.
+# - "view"
+#     A route can launch directly a view without controller
+#     Target directly the twig file from "views" folder and without extension.
+# - "action"
+#     Controller and action shortcut name. This will execute an action onto
+#     a controller. If you have the method "index" inside "MyController", the
+#     shortcut name is "MyController.index".
+#     Controllers are loaded from "controllers/" folder.
+# - "method"
+#     Accepted HTTP method for this route. Default is GET, can be POST, etc
+
+### Generate an URL
+# To generate an URL to a route from templates :
+# {{ app.generateURL('test', {'id' : 'This parameter will be slugified'}) }}
+# Parameters are automatically slugified, spaces are replaced by dashes and
+# every special char is stripped.
+
+
 # On all environments
 default :
 
@@ -20,6 +52,10 @@ default :
     url     : /
     action  : PagesController.index
 
+  # Demo route for reverse routing
+  test :
+    url     : /test/{id}
+    action  : PagesController.test
 
   # ---------------------------------------------------------------------------- API
 
