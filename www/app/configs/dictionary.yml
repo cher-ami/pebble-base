@@ -1,21 +1,22 @@
 
 ### Dictionary :
 # Here goes all text of your application.
-# Do not insert any word directly inside your template or your javascript code.
-# So your app will be more portable and translatable easily.
+# Do not insert text content directly inside templates or javascript code.
+# Your app will be more portable and easily translatable.
 
 ### Current page :
 # Pebble will add a node "currentPage" inside "config.dictionary" depending
 # on which page you are. If you have "config.dictionary.pages.indexPage" node
-# defined, config.dictionary.currentPage will be set if you are on "indexPage"
+# defined, "config.dictionary.currentPage" will be set if you are on "indexPage"
 # route.yml keys are used to target currentPage.
 
 ### Inside templates :
-# You can use {{ config.dictionary }} inside templates to access this config.
+# You can use {{ dictionary }} inside templates to access this config.
+# A shortcut {{ D }} is also available.
 
 ### From javascript :
 # Your dictionary needs to be available to javascript
-# window.__dictionary is injected with "public" and "currentPage"
+# "window.__dictionary" is injected in "mainLayout.twig"
 
 
 # On all environments
@@ -23,33 +24,31 @@ default :
 
   # ---------------------------------------------------------------------------- PUBLIC
 
-  # Available from all pages
-  # Warning, this can be injected as clear JSON for javascript
-  public :
+  # Those data can be injected into javascript.
+  # By default in "mainLayout" only "layout" and "generic" are injected.
+  # Be careful with sensitive data.
 
-    # Data for layout
-    layout :
-      header :
-      footer :
+  # Data for main layout
+  layout :
+    header :
+    footer :
 
-    # Common words or sentences used across the app
-    generic :
-      share : 'Share'
+  # Common words or sentences used across the app
+  generic :
+    share : 'Share'
 
-
-  # ---------------------------------------------------------------------------- PRIVATE
-
-  # Available from all pages
-  # This will not be injected as clear JSON for javascript
-  private :
+  # Popups accross the app
+  popups :
 
 
   # ---------------------------------------------------------------------------- PAGES
 
   # Available for current page only
   # Warning, this can be injected as clear JSON for javascript
-  # Page data are be injected into "config.dictionary.currentPage" dynamically.
+  # Page data are injected into "dictionary.currentPage" dynamically.
+
   pages :
+
     # Not found page
     notFound :
       text : 404

@@ -61,8 +61,10 @@
 	<!-- JS DICTIONARY -->
 	<script>
 		window['__dictionary'] = {
-			"public" : {{ app.config.dictionary.public | json_encode() | raw }},
-			"currentPage" : {{ app.config.dictionary.currentPage | json_encode() | raw }}
+			"layout" : {{ D.layout | json_encode() | raw }},
+			"generic" : {{ D.generic | json_encode() | raw }},
+			"popups" : {{ D.popups | json_encode() | raw }},
+			"currentPage" : {{ D.currentPage | json_encode() | raw }}
 		}
 	</script>
 
