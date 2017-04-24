@@ -18,6 +18,8 @@
 # Your dictionary needs to be available to javascript
 # "window.__dictionary" is injected in "mainLayout.twig"
 
+# TODO : Faire un layus sur les Majuscules au début des phrases et des transformations dans les templates ou en CSS
+
 
 # On all environments
 default :
