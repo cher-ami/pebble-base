@@ -4,6 +4,7 @@ namespace controllers;
 
 use Exception;
 use pebble\core\PebbleApp;
+use Silex\Application;
 use Symfony\Component\HttpFoundation\Request;
 
 /**
@@ -14,6 +15,11 @@ use Symfony\Component\HttpFoundation\Request;
  */
 class AppController
 {
+	// ------------------------------------------------------------------------- MODELS
+
+
+	// ------------------------------------------------------------------------- INIT
+
 	/**
 	 * AppController constructor.
 	 * Created just before phase 1.
@@ -23,6 +29,33 @@ class AppController
 	{
 
 	}
+
+	/**
+	 * Init and register custom services for this app.
+	 * Can add TwigHelpers or register silex components which are not already loaded by Pebble.
+	 * @param PebbleApp $app instance of the PebbleApp
+	 * @param Application $silexApp instance of the SilexApp
+	 */
+	public function registerServices ( PebbleApp $app, Application $silexApp )
+	{
+		// Example
+		//$silexApp->register( new SessionServiceProvider() );
+	}
+
+	/**
+	 * Init application dependencies.
+	 * Called just after initServices so Silex and configurations are configured.
+	 * We can now load application models / apis / etc
+	 * @param PebbleApp $app instance of the PebbleApp
+	 */
+	public function initAppDependencies (PebbleApp $app)
+	{
+		// Example
+		// $this->_model = new Model( $app );
+	}
+
+
+	// ------------------------------------------------------------------------- MIDDLE WARES
 
 	/**
 	 * Called just after phase 3 and before action is called.

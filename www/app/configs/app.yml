@@ -7,10 +7,24 @@
 # Important :
 # We advice to use configurable automated task to manage this file
 # This file has to be "make" and added into .gitignore file.
+
 # For example see :
 # - https://www.npmjs.com/package/grunt-deployer
 # - https://github.com/solid-js/web-base
 
+# Version of the application.
+# Have to be incremented following http://semver.org/
+# Assets and cache system will use version to know when things have been updated.
 version   : "0.1.0"
+
+# Name of your environment (where the app is running)
+# Typical env names are "local" "staging" or "production"
+# Every YML config file will use env to override props
+# Useful if you have for ex different DB credential on "staging" and "production"
 env       : "name-of-running-environment"
+
+# Debug mode
+# Please set to false on production.
+# If debug is enabled, all PHP errors will be shown on screen. Useful when coding.
+# If disabled, every caught error will be logged through Monolog and a fatal error screen will be served.
 debug     : true

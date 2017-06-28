@@ -1,7 +1,7 @@
 {
-	"version" : "0.1.7",
+	"version" : "0.2.0",
 	"require": {
-		"cher-ami/pebble-lib": ">=0.1.6"
+		"cher-ami/pebble-lib": ">=0.2.0"
 	},
 	"minimum-stability": "dev",
 	"autoload": {

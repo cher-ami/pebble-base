@@ -13,7 +13,8 @@ class DemoServiceController
 	 */
 	public function __construct (PebbleApp $app)
 	{
-		// Here we register and configure specific silex modules or providers
+		// Here we register and configure specific silex modules or providers for this controller
+		// If you need to register anything application wide, do it inside AppController->initServices
 		//$app->getSilex()->register(new ValidatorServiceProvider());
 	}
 
