@@ -1,0 +1,33 @@
+
+# ------------------------------------------------------------------------------ REWRITING
+
+# Rewriting
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule (.*) index.php [L,QSA]
+
+# ------------------------------------------------------------------------------ MISC
+
+# Allow symbolic links
+Options +FollowSymLinks
+
+# Disable multiview
+# https://httpd.apache.org/docs/current/content-negotiation.html#multiviews
+Options -MultiViews
+
+# Disable directory listing
+Options -Indexes
+
+# ------------------------------------------------------------------------------ SECURITY
+
+# Disable server signature in headers
+ServerSignature Off
+
+# Disable mime-type sniffing
+<IfModule mod_headers.c>
+    Header set X-Content-Type-Options "nosniff"
+</IfModule>
+
+# Default charset is utf-8
+AddDefaultCharset utf-8

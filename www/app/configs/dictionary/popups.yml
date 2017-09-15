@@ -1,0 +1,34 @@
+
+### Dictionary :
+# Here goes all text of your application.
+# Do not insert text content directly inside templates or javascript code.
+# Your app will be more portable and easily translatable.
+
+### Current page :
+# Pebble will add a node "currentPage" inside "config.dictionary" depending
+# on which page you are. If you have "config.dictionary.pages.indexPage" node
+# defined, "config.dictionary.currentPage" will be set if you are on "indexPage"
+# route.yml keys are used to target currentPage.
+
+### Inside templates :
+# You can use {{ dictionary }} inside templates to access this config.
+# A shortcut {{ D }} is also available.
+
+### From javascript :
+# Your dictionary needs to be available to javascript
+# "window.__dictionary" is injected in "mainLayout.twig"
+
+# TODO : Faire un layus sur les Majuscules au début des phrases et des transformations dans les templates ou en CSS
+
+
+# On all environments
+default :
+
+  # ---------------------------------------------------------------------------- PUBLIC
+
+  # Those data can be injected into javascript.
+  # By default in "mainLayout" only "layout" and "generic" are injected.
+  # Be careful with sensitive data.
+
+  # Popups accross the app
+  popups :

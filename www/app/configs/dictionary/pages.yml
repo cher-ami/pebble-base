@@ -1,0 +1,54 @@
+
+### Dictionary :
+# Here goes all text of your application.
+# Do not insert text content directly inside templates or javascript code.
+# Your app will be more portable and easily translatable.
+
+### Current page :
+# Pebble will add a node "currentPage" inside "config.dictionary" depending
+# on which page you are. If you have "config.dictionary.pages.indexPage" node
+# defined, "config.dictionary.currentPage" will be set if you are on "indexPage"
+# route.yml keys are used to target currentPage.
+
+### Inside templates :
+# You can use {{ dictionary }} inside templates to access this config.
+# A shortcut {{ D }} is also available.
+
+### From javascript :
+# Your dictionary needs to be available to javascript
+# "window.__dictionary" is injected in "mainLayout.twig"
+
+# TODO : Faire un layus sur les Majuscules au début des phrases et des transformations dans les templates ou en CSS
+
+
+# On all environments
+default :
+
+  # ---------------------------------------------------------------------------- PAGES
+
+  # Available for current page only
+  # Warning, this can be injected as clear JSON for javascript
+  # Page data are injected into "dictionary.currentPage" dynamically.
+
+  pages :
+
+    # Not found page
+    notFound :
+      text : 404
+
+    # Fatal error page
+    fatal :
+      text : "A fatal error occurred"
+
+    # Injected for index page
+    index :
+      title : "Title for homePage"
+      content : |
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        Integer maximus, erat a ornare dapibus, ex dolor tempor dui, nec fringilla ante leo sed sapien.
+        Curabitur pretium accumsan dui, id hendrerit sapien dapibus ut. Etiam risus quam, blandit laoreet justo ac, congue hendrerit mauris.
+        Integer ac dignissim odio, ut congue turpis.
+        Praesent justo dui, venenatis eget turpis nec, facilisis commodo turpis. Suspendisse at gravida risus.
+        Nullam quis scelerisque lacus. Suspendisse quam odio, vehicula ut convallis id, luctus scelerisque risus. Maecenas eget egestas quam.
+        Pellentesque euismod magna a nulla lobortis, et molestie velit venenatis.
+

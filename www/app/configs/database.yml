@@ -4,6 +4,7 @@
 # On all environments
 default:
   host      : ""
+  #port      : ""
   user      : ""
   password  : ""
   dbname    : ""
