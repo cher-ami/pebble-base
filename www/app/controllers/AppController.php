@@ -6,6 +6,7 @@ use Exception;
 use pebble\core\PebbleApp;
 use Silex\Application;
 use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\HttpFoundation\Response;
 
 /**
  * App controller is for managing specific Application flow.
@@ -60,10 +61,13 @@ class AppController
 	/**
 	 * Called just after phase 3 and before action is called.
 	 * Is useful to prepare data for all actions.
+	 * Action can be prevented if a response is returned.
+	 * Ex : return a RedirectResponse if user do not have good credentials for this action.
 	 * @param Request|null $request The associated request which triggered the route.
 	 * @param PebbleApp $app instance of the PebbleApp
 	 * @param string $pRouteName The route name from the routes config.
 	 * @param Exception $exception Triggering exception.
+	 * @return Response|mixed|null|void Return something to prevent action.
 	 */
 	public function beforeAction ( PebbleApp $app, $request, $pRouteName, $exception)
 	{
