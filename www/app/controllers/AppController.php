@@ -67,11 +67,12 @@ class AppController
 	 * @param PebbleApp $app instance of the PebbleApp
 	 * @param string $pRouteName The route name from the routes config.
 	 * @param Exception $exception Triggering exception.
-	 * @return Response|mixed|null|void Return something to prevent action.
+	 * @return Response|mixed|null Return something to prevent action.
 	 */
 	public function beforeAction ( PebbleApp $app, $request, $pRouteName, $exception)
 	{
-
+		// Allow action
+		return null;
 	}
 
 
